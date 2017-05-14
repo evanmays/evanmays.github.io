@@ -27,7 +27,10 @@
         echo '<title>Contact Evan Mays</title>';
     }
     elseif ($currentPage == "wordpressplugins") {
-    	echo '<title>Wordpress Plugins by Evan Mays</title>';
+        echo '<title>Wordpress Plugins by Evan Mays</title>';
+    }
+    elseif ($currentPage == "allwebsites") {
+    	echo '<title>Websites by Evan Mays</title>';
     }
     ?>
     
