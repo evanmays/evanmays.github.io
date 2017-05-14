@@ -3,7 +3,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-            <p><?php if ($currentPage != "home") { ?><span class="sliding-u-r-l" id="homepage-sliding-u-r-l"><a href="/">Go to my homepage</a></span><br><?php } ?>&copy; Copyright 2013-<?php echo date("Y"); ?> Evan Mays</p>
+            <p><?php if ($currentPage == "websites") { ?><span class="sliding-u-r-l" id="homepage-sliding-u-r-l"><a href="/all-websites">View more of my work</a></span><br><?php } ?><?php if ($currentPage != "home") { ?><span class="sliding-u-r-l" id="homepage-sliding-u-r-l"><a href="/">Go to my homepage</a></span><br><?php } ?>&copy; Copyright 2013-<?php echo date("Y"); ?> Evan Mays</p>
             </div>
           </div>
         </div>
