@@ -16,11 +16,11 @@ include "assets/phpfunctions/header.php"; ?>
                     </p>
                   </div>
                   <div class="col-lg-4 col-md-4 centered">
-                    <a href="http://hebesportsbands.com" target="_blank">
-                      <img src="assets/img/Hebe_Sports_Bands-Website-Headband-Photo.png" alt="Image of Hebe Sports Bands website designed by Evan Mays (Homepage Guys)" title="Hebe Sports Bands Website">
+                    <a href="http://edwardvilga.com" target="_blank">
+                      <img src="assets/img/Edward_Vilga-Website-Lotus_Pose-Photo.jpg" alt="Image of Samuels Luxury Transportation website designed by Evan Mays (Homepage Guys)" title="Edward Vilga Website">
                     </a>
                     <p>
-                      <strong>Hebe Sports Bands</strong><br>I designed. I keep things up to date. I teach social media. They're in buisiness.
+                      <strong>Edward Vilga</strong><br>I designed. I manage his online presence. He publishes content.
                     </p>
                   </div>
                   <div class="col-lg-4 col-md-4 centered">
@@ -34,11 +34,11 @@ include "assets/phpfunctions/header.php"; ?>
                 </div>
                 <div class="row grid">
                   <div class="col-lg-4 col-md-4 centered">
-                    <a href="http://edwardvilga.com" target="_blank">
-                      <img src="assets/img/Edward_Vilga-Website-Lotus_Pose-Photo.jpg" alt="Image of Samuels Luxury Transportation website designed by Evan Mays (Homepage Guys)" title="Edward Vilga Website">
+                    <a href="assets/pdf/Hebe_Sports_Bands-Retired-Website.pdf" target="_blank">
+                      <img src="assets/img/Hebe_Sports_Bands-Website-Headband-Photo.png" alt="Image of Hebe Sports Bands website designed by Evan Mays (Homepage Guys)" title="Hebe Sports Bands Website">
                     </a>
                     <p>
-                      <strong>Edward Vilga</strong><br>I designed. I manage his online presence. He publishes content.
+                      <strong>Hebe Sports Bands</strong><br>I designed. I keep things up to date. I teach social media. They're in business.
                     </p>
                   </div>
                   <div class="col-lg-4 col-md-4 centered">
