@@ -9,7 +9,7 @@ include "assets/phpfunctions/header.php"; ?>
 	          		<h1>Wordpress Plugins</h1>
                 <div class="row grid">
                   <div class="col-lg-5 col-md-5 centered">
-                    <img id="pluginimage" src="http://www.webcreate.me/wp-content/uploads/2015/02/WordPress-Plugins.png">
+                    <img id="pluginimage" src="assets/img/WordPress-Plugins.png">
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                       <p class="lead">
                       WP Newsletter Generator Pro 2016. $97
