@@ -29,6 +29,7 @@ include "../assets/phpfunctions/post.php"; ?>
 		                </p>
 	        		</div><!-- /col-lg-8 -->
 	      		</div><!-- /row -->
+	      		<?php include "../assets/phpfunctions/blogfooter.php"; ?>
 	    	</div> <!-- /container -->
 		</div><!-- /hello -->
 
