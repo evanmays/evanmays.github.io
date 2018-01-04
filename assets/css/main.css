@@ -349,7 +349,8 @@ a:link {
 
 /* blog */
 
-#readtimeline {
+#readtime-line {
+	margin-top: 30px;
 	margin-bottom:0px;
 }
 
@@ -375,6 +376,10 @@ a:link {
 	background: #f9f9f9;
 	margin-bottom:20px;
 	padding:20px;
+}
+
+.postInBox h3 {
+	margin-top:0px;
 }
 
 /* Facny Hover */

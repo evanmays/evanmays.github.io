@@ -3,19 +3,25 @@ include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; 
 
 $posts = [
-	[title, date, image],
-	[title, date, image],
-	[title, date, image],
-	[title, date, image],
-	[title, date, image],
-	[title, date, image]
+	["Post Template", "Jan 4th, 2018", image, "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, lacus nec vestibulum pretium, velit urna laoreet nisi, sit amet scelerisque velit sapien vitae turpis. Suspendisse mollis ultrices sem, sed ullamcorper felis maximus interdum. Curabitur sed dolor eget sem tincidunt consequat ac nec dolor. Phasellus nunc ipsum, varius vel pharetra quis, aliquam id ante.</p>", "//evanmays.com/blog/post_template.php"],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link],
+	[title, date, image, snippet, link]
 ];
 $postsPerPage = 5;
 
-function displayPostInBox($title, $date, $img) {
+function displayPostInBox($title, $date, $img, $snippet, $link) {
 	?>
 		<div class="postInBox">
-			<?php echo $title; ?>
+			<h3><?php echo $date; ?></h3>
+			<h2><?php echo $title; ?></h2>
+			<?php echo $snippet; ?>
+			<p><a href="<?php echo $link; ?>">Read more</a></p>
 		</div>
 	<?
 }
@@ -34,7 +40,9 @@ function displayPostInBox($title, $date, $img) {
 		        					$title = $posts[$i][0];
 		        					$date = $posts[$i][1];
 		        					$img = $posts[$i][2];
-		        					displayPostInBox($title, $date, $img);
+		        					$snippet = $posts[$i][3];
+		        					$link = $posts[$i][4];
+		        					displayPostInBox($title, $date, $img, $snippet, $link);
 		        				}
 		        				else {
 		        					$pagination = true;
@@ -42,7 +50,7 @@ function displayPostInBox($title, $date, $img) {
 		        				}
 		        			}
 		        			if ($pagination) {
-		        				echo "<a href=''>Click here to view the next older $postsPerPage posts</a>";
+		        				echo "<a href=''>View the next $postsPerPage older posts</a>";
 		        			}
 		        		?>
 	        		</div><!-- /col-lg-8 -->
