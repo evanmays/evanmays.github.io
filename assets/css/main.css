@@ -147,7 +147,6 @@ a:after {
 }
 
 #hello h2 {
-	color: #c0c0c0;
 	font-weight: 400;
 }
 
@@ -346,6 +345,21 @@ html,body
 
 a:link {
     color: #f85c37;
+}
+
+/* blog */
+
+#dateline {
+	margin-bottom:0px;
+}
+
+#titleline {
+	margin:0px;
+}
+
+#byline {
+	margin-top:0px;
+	margin-bottom: 40px;
 }
 
 /* Facny Hover */
