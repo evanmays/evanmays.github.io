@@ -1,0 +1,32 @@
+# BEGIN hiding .php extension
+
+RewriteEngine On
+
+# Unless directory, remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ /$1 [R=301,L]
+
+# Redirect external .php requests to extensionless url for index.php
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule (index)\.php$ /$1 [R=301,L]
+#RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
+# Redirect external .php requests to extensionless url for websites.php
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule (websites)\.php$ /$1 [R=301,L] #
+
+# Redirect external .php requests to extensionless url for wordpressplugins.php
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule (wordpressplugins)\.php$ /$1 [R=301,L] #
+
+# Redirect external .php requests to extensionless url for contact.php
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule (contact)\.php$ /$1 [R=301,L] #
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^([^/.]+)$ $1.php [L]
+#END hiding .php extension
+
+
+#404 Page
+ErrorDocument 404 /404.php
