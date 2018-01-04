@@ -4,6 +4,7 @@ $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent
 $ogType = "article";
 $img = "noimageyet";
 $url = "https://evanmays.com/blog/post_template";
+$blog = true;
 
 include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; ?>

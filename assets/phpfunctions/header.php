@@ -37,6 +37,14 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <?php if(isset($blog)) { ?>
+    <!-- BEGIN PRIVY WIDGET CODE -->
+    <script type='text/javascript'> var _d_site = _d_site || 'D572DD87773D21994C7D36E8'; </script>
+    <script src='//widget.privy.com/assets/widget.js'></script>
+    <!-- END PRIVY WIDGET CODE -->
+    <?php } ?>
+
   </head>
 
   <body>
