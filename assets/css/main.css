@@ -1,8 +1,8 @@
 /*
- * Author: Carlos Alvarez
+ * Author: Carlos Alvarez (customized by Evan)
  * URL: http://alvarez.is
  *
- * Project Name: Bolt - Free Bootstrap 3 Theme
+ * Project Name: Bolt - Free Bootstrap 3 Theme (customized by Evan)
  * Version: 1.0
  * URL: http://blacktie.co
  */
@@ -349,17 +349,32 @@ a:link {
 
 /* blog */
 
-#dateline {
+#readtimeline {
 	margin-bottom:0px;
+}
+
+#dateline {
+	margin:0px;
 }
 
 #titleline {
 	margin:0px;
+	font-size: 60px;
+	font-weight: 700;
+	letter-spacing: 0px;
+	line-height: 1em;
 }
 
 #byline {
 	margin-top:0px;
 	margin-bottom: 40px;
+}
+
+.postInBox {
+	border: 1px solid #f5f5f5;
+	background: #f9f9f9;
+	margin-bottom:20px;
+	padding:20px;
 }
 
 /* Facny Hover */

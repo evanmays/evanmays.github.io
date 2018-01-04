@@ -11,7 +11,10 @@
     	echo '<meta name="description" content="The portfolio website of Evan Mays. The website designer, software developer, and manager.">';
     }
     elseif ($currentPage == "contact") {
-    	echo '<meta name="description" content="Evan Mays'."'".'contact info.">';
+        echo '<meta name="description" content="Evan Mays'."'".' contact info.">';
+    }
+    elseif ($currentPage == "blog") {
+    	echo '<meta name="description" content="Evan Mays'."'".' blog.">';
     }
     ?>
     
@@ -30,7 +33,10 @@
         echo '<title>Wordpress Plugins by Evan Mays</title>';
     }
     elseif ($currentPage == "allwebsites") {
-    	echo '<title>Websites by Evan Mays</title>';
+        echo '<title>Websites by Evan Mays</title>';
+    }
+    elseif ($currentPage == "blog") {
+    	echo '<title>Evan\'s Blog Posts</title>';
     }
     ?>
     

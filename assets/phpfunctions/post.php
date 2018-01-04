@@ -1,8 +1,9 @@
 <?php
 
 function headline($title, $timeToRead, $datePosted) {
+    echo "<h3 id='dateline'>$timeToRead min read</h3>";
     echo "<h2 id='dateline'>$datePosted</h2>";
     echo "<h1 id='titleline'>$title</h1>";
-    echo "<h2 id='byline'>by Evan Mays - $timeToRead min read</h2>";
+    echo "<h2 id='byline'>by <a href='https://evanmays.com/blog'>Evan Mays</a></h2>";
 }
 ?>
