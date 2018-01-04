@@ -1,4 +1,10 @@
-<?php $currentPage = "wordpressplugins";
+<?php
+$title = "Post Template";
+$description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, lacus nec vestibulum pretium, velit urna laoreet nisi, sit amet scelerisque velit sapien vitae turpis. Suspendisse mollis ultrices sem, sed ullamcorper felis maximus interdum. Curabitur sed dolor eget sem tincidunt consequat ac nec dolor. Phasellus nunc ipsum, varius vel pharetra quis, aliquam id ante.";
+$ogType = "article";
+$img = "noimageyet";
+$url = "https://evanmays.com/blog/post_template";
+
 include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; ?>
       
@@ -7,7 +13,7 @@ include "../assets/phpfunctions/post.php"; ?>
 	    	<div class="container">
 	      		<div class="row">
 	        		<div class="col-lg-8 col-lg-offset-2 centered">
-		        		<?php headline(title, timetoread, date); ?>
+		        		<?php headline($title, timetoread, date); ?>
 		                <p>
 		                	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, lacus nec vestibulum pretium, velit urna laoreet nisi, sit amet scelerisque velit sapien vitae turpis. Suspendisse mollis ultrices sem, sed ullamcorper felis maximus interdum. Curabitur sed dolor eget sem tincidunt consequat ac nec dolor. Phasellus nunc ipsum, varius vel pharetra quis, aliquam id ante.
 		                </p>

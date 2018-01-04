@@ -1,4 +1,10 @@
-<?php $currentPage = "wordpressplugins";
+<?php
+$title = "Wordpress Plugins by Evan Mays";
+$description = "The display of Evan's Wordpress plugins.";
+$ogType = "website";
+$img = "https://evanmays.com/assets/img/WordPress-Plugins.png";
+$url = "https://evanmays.com/wordpressplugins";
+
 include "assets/phpfunctions/header.php"; ?>
       
       

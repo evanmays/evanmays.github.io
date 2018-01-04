@@ -1,4 +1,10 @@
-<?php $currentPage = "blog";
+<?php
+$title = "Evan's Blog Posts";
+$description = "Evan Mays' blog.";
+$ogType = "website";
+$img = "noimageyet";
+$url = "https://evanmays.com/blog/";
+
 include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; 
 

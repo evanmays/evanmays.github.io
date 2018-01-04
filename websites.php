@@ -1,4 +1,10 @@
-<?php $currentPage = "websites";
+<?php
+$title = "Websites by Evan Mays";
+$description = "The portfolio page of websites worked on by Evan Mays.";
+$ogType = "website";
+$img = "https://www.mediabistro.com/wp-content/uploads/2016/02/tips-on-getting-your-copywriter-portfolio-started.jpg";
+$url = "https://evanmays.com/websites";
+
 include "assets/phpfunctions/header.php"; ?>
       
 		<div id="hello">

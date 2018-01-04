@@ -1,4 +1,10 @@
-<?php $currentPage = "contact";
+<?php 
+$title = "Contact Evan Mays";
+$description = "Evan Mays' contact info";
+$ogType = "website";
+$img = "http://huguenotmuseum.org/wp-content/uploads/2015/03/contact-us1.jpg";
+$url = "https://evanmays.com/contact";
+
 include "assets/phpfunctions/header.php"; ?>
       
 		<div id="hello">

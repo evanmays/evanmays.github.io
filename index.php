@@ -1,4 +1,10 @@
-<?php $currentPage = "home";
+<?php
+$title = "Evan Mays Websites & More";
+$description = "The portfolio website of Evan Mays. The entrepreneur, software developer, and website designer.";
+$ogType = "website";
+$img = "noimageyet"; //FIXME: add an image
+$url = "https://evanmays.com";
+
 include "assets/phpfunctions/header.php"; ?>
 		<div id="hello">
 	    	<div class="container">

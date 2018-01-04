@@ -1,4 +1,11 @@
-<?php include "assets/phpfunctions/header.php"; ?>
+<?php
+$title = "Page not found - 404";
+$description = "This is a 404 page.";
+$ogType = "website";
+$img = "noneonpurpose"; //dont want to attract people to clicking on my 404
+$url = "https://evanmays.com/404";
+
+include "assets/phpfunctions/header.php"; ?>
 		<div id="hello">
 	    	<div class="container">
 	      		<div class="row">
