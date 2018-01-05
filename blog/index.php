@@ -9,15 +9,7 @@ include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; 
 
 $posts = [
-	["Post Template", "Jan 4th, 2018", image, "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat, lacus nec vestibulum pretium, velit urna laoreet nisi, sit amet scelerisque velit sapien vitae turpis. Suspendisse mollis ultrices sem, sed ullamcorper felis maximus interdum. Curabitur sed dolor eget sem tincidunt consequat ac nec dolor. Phasellus nunc ipsum, varius vel pharetra quis, aliquam id ante.</p>", "//evanmays.com/blog/post_template.php"],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link],
-	[title, date, image, snippet, link]
+	["I'm learning VR in 21 Days", "Jan 5th, 2018", "//evanmays.com/assets/img/augmented-reality-1280x853.jpg", "<p>I'm learning virtual reality (VR) by making a game! The end product will be a target practice game where you shoot lasers from your eyes. In 21 days, I'll have a completed beta version of the game, playable on smartphones.</p>", "https://evanmays.com/blog/Im-Learning-VR-in-21-Days"]
 ];
 $postsPerPage = 5;
 
@@ -25,6 +17,7 @@ function displayPostInBox($title, $date, $img, $snippet, $link) {
 	?>
 		<div class="postInBox">
 			<h3><?php echo $date; ?></h3>
+			<img class="large-blog-img img-in-box" src="<?php echo $img; ?>" />
 			<h2><?php echo $title; ?></h2>
 			<?php echo $snippet; ?>
 			<p><a href="<?php echo $link; ?>">Read more</a></p>
