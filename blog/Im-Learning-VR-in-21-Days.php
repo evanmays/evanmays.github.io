@@ -15,7 +15,7 @@ include "../assets/phpfunctions/post.php"; ?>
 	      		<div class="row">
 	        		<div class="col-lg-8 col-lg-offset-2 centered">
 		        		<?php headline($title, 3, "Jan 5th, 2018"); ?>
-		        		<img src="//evanmays.com/assets/img/augmented-reality-1920x1280.jpg" />
+		        		<img class="large-blog-img" src="//evanmays.com/assets/img/augmented-reality-1920x1280.jpg" />
 		                <p>
 		                	I'm learning virtual reality (VR) by making a game! The end product will be a target practice game where you shoot lasers from your eyes. In 21 days, I'll have a completed beta version of the game, playable on smartphones.
 		                </p>
