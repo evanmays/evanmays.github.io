@@ -390,6 +390,10 @@ img.large-blog-img {
 	box-sizing: border-box;
 }
 
+img.img-in-box {
+	margin-bottom:0px;
+}
+
 /* Facny Hover */
 
 .sliding-u-r-l {
