@@ -40,3 +40,7 @@ RewriteRule ^ %{REQUEST_URI}.php [L]
 
 #404 Page
 ErrorDocument 404 /404.php
+
+#Force non-www:
+RewriteCond %{HTTP_HOST} ^www\.evanmays\.com [NC]
+RewriteRule ^(.*)$ https://evanmays.com/$1 [L,R=301]
