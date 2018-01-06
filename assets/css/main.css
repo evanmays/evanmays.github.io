@@ -386,6 +386,10 @@ a:link {
 	padding:20px;
 }
 
+.postInBox:last-of-type {
+	margin-bottom:60px;
+}
+
 .postInBox h3 {
 	margin-top:0px;
 }
