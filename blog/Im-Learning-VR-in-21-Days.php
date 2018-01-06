@@ -1,6 +1,7 @@
 <?php
 $title = "I'm learning VR in 21 Days";
 $description = "I'm learning virtual reality (VR)! I've never done anything in VR before, but in 21 days, I'll have a demo version of a sci-fi target practice game. Imagine laser beams that shoot from your eyes, arcade-style levels that increase in difficulty, and hopefully astonishing graphics.";
+$ogType = "article";
 $img = "https://evanmays.com/assets/img/augmented-reality-1280x853.jpg";
 $url = "https://evanmays.com/blog/Im-Learning-VR-in-21-Days";
 $blog = true;
