@@ -15,7 +15,7 @@ include "assets/phpfunctions/header.php"; ?>
 			          <p><span class="sliding-u-r-l"><a href="wordpressplugins"><i class="fa fa-wordpress" aria-hidden="true"></i> My wordpress plugins</a></span></p>
 			          <!-- <p><span class="sliding-u-r-l"><a href=""><i class="fa fa-hashtag" aria-hidden="true"></i> My startups</a></span></p> -->
                 <p><span class="sliding-u-r-l"><a href="contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Info</a></span></p>
-			          <p><span class="sliding-u-r-l"><a href="Evan_Mays-Resume.pdf"><i class="fa fa-file-text-o" aria-hidden="true"></i> My résumé</a></span></p>
+			          <p><span class="sliding-u-r-l"><a href="https://evanmays.com/blog/Im-Learning-VR-in-21-Days"><i class="fa fa-newspaper-o" aria-hidden="true"></i> My blog</a></span></p>
 			          <p><span class="sliding-u-r-l"><a href="https://www.linkedin.com/in/evan-mays"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></span></p>
 
 	  
