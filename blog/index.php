@@ -9,7 +9,7 @@ include "../assets/phpfunctions/header.php";
 include "../assets/phpfunctions/post.php"; 
 
 $posts = [
-	["I'm learning VR in 21 Days", "Jan 5th, 2018", "//evanmays.com/assets/img/augmented-reality-1280x853.jpg", "<p>I'm learning virtual reality (VR) by making a game! The end product will be a target practice game where you shoot lasers from your eyes. In 21 days, I'll have a completed beta version of the game, playable on smartphones.</p>", "https://evanmays.com/blog/Im-Learning-VR-in-21-Days"]
+	["I'm learning VR in 21 Days", "Jan 5th, 2018", "//evanmays.com/assets/img/augmented-reality-1280x853.jpg", "<p>I'm learning virtual reality (VR)! I've never done anything in VR before, but in 21 days, I'll have a demo version of a sci-fi target practice game. Imagine laser beams that shoot from your eyes, arcade-style levels that increase in difficulty, and hopefully astonishing graphics.</p>", "https://evanmays.com/blog/Im-Learning-VR-in-21-Days"]
 ];
 $postsPerPage = 5;
 

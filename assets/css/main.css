@@ -390,6 +390,15 @@ img.large-blog-img {
 	box-sizing: border-box;
 }
 
+img.medium-blog-img {
+	max-width:450px;
+	padding: 0px 0px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	height:auto;
+	box-sizing: border-box;
+}
+
 img.img-in-box {
 	margin-bottom:0px;
 }
