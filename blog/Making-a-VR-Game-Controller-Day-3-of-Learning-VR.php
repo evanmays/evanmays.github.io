@@ -15,7 +15,7 @@ include "../assets/phpfunctions/post.php"; ?>
 	      		<div class="row">
 	        		<div class="col-lg-8 col-lg-offset-2 centered">
 		        		<?php headline($title, 2, "Jan 7th, 2018"); ?>
-		        		<img class="large-blog-img" src="//evanmays.com/assets/img/video-game-controller-1920x1279.jpg" />
+		        		<img class="large-blog-img" src="//evanmays.com/assets/img/video-game-controller-1280x853.jpg" />
 		                <p>
 		                	Today is day 3 of my challenge to learn VR game development in 21 days. Over the past two days, I built a working prototype of my game. On the 21st day, I'll release the game. 
 		                </p>
@@ -35,13 +35,13 @@ include "../assets/phpfunctions/post.php"; ?>
 		                	The Technology Used
 		                </h2>
 		                <p>
-		                	I decided to make two websites. One for the computer and one for the phone. The player has to open both sites on their respective devices. Once the user presses spacebar, the computer's web browser uses the internet to send to tell the phone's web browser that it is time to shoot.
+		                	I decided to make two websites. One for the computer and one for the phone. The player has to open both sites on their respective devices. Once the user presses spacebar, the computer's web browser uses the internet to tell the phone's web browser that it is time to shoot.
 		                </p>
 		                <p>
 		                	I tried a few things. The first tech was WebRTC. WebRTC is the connection between the computer and phone that lets them talk to each other. This is what we need.
 		                </p>
 		                <p>
-		                	WebRTC is also one of the quickest ways to send messages between devices. So, when you press spacebar, there is a few millisecond delay.
+		                	WebRTC is also one of the quickest ways to send messages between devices. So, when you press spacebar, there are a few milliseconds of delay.
 		                </p>
 		                <p>
 		                	However, WebRTC is still a new technology, so it doesn't work on Apple devices yet.
