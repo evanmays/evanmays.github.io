@@ -411,6 +411,17 @@ img.medium-blog-img {
 	box-sizing: border-box;
 }
 
+img.medium-blog-img-right {
+	float:right;
+	max-width:300px;
+	padding: 0px 0px;
+	margin-left: 12px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	height:auto;
+	box-sizing: border-box;
+}
+
 img.img-in-box {
 	margin-bottom:0px;
 }
