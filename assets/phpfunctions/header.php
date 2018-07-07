@@ -47,6 +47,9 @@
 
     <!-- Stripe Payments and Fraud Protection -->
     <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Jquery Slim Minified -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="   crossorigin="anonymous"></script>
   </head>
 
   <body>

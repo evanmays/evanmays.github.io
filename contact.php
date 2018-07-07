@@ -17,7 +17,7 @@ include "assets/phpfunctions/header.php"; ?>
                     include "assets/phpfunctions/contactconditionals.php";
                     checkContactFormPHPResponse();
                     ?>
-                    <form name="contactform" method="post" action="assets/phpfunctions/send_form_email.php"> <!-- go to this page #contact -->
+                    <form id="contactform" name="contactform" method="post" action="assets/phpfunctions/send_form_email.php"> <!-- go to this page #contact -->
                       <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name" name="name">
@@ -43,6 +43,62 @@ include "assets/phpfunctions/header.php"; ?>
                           All credit card info is stored on Stripe or Apple's servers.
                         </label>
                       </div>
+                      <script src="https://checkout.stripe.com/checkout.js"></script>
+                      <script>
+                      var handler = StripeCheckout.configure({
+                        key: 'pk_live_r6alnlcg0s2Y923CV5JVutgd',
+                        image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+                        locale: 'auto',
+                        token: function(token) {
+                          // You can access the token ID with `token.id`.
+                          $('<input>').attr('type','hidden')
+                          .attr('value', token.id)
+                          .attr('name', 'stripeToken').appendTo('#contactform');
+                          $('<input>').attr('type','hidden')
+                          .attr('value', token.email)
+                          .attr('name', 'stripeEmail').appendTo('#contactform');
+                          // Get the token ID to your server-side code for use.
+
+                          document.getElementById("contactform").submit();
+                        }
+                      });
+
+                      document.getElementById("customButton").addEventListener('click', function(e) {
+                        //verify input fields
+                        if (validFields() == false) {
+                          return;
+                        }
+
+                        // Open Checkout with further options:
+                        handler.open({
+                          name: "Contact Me",
+                          description: "I don't like spam.",
+                          amount: 100,
+                          zipCode: true,
+                          image: "https://stripe.com/img/documentation/checkout/marketplace.png",
+                          locale: "auto",
+                          email: document.getElementById("emailInput").value,
+                        });
+                        e.preventDefault();
+                      });
+
+                      // Close Checkout on page navigation:
+                      window.addEventListener('popstate', function() {
+                        handler.close();
+                      });
+
+                      function validFields() {
+                        var name = document.getElementById("").value;
+                        var email = document.getElementById("").value;
+                        var phone = document.getElementById("").value;
+                        var message = document.getElementById("").value;
+
+                        const validName = /^[A-Za-z .'-]+$/.test(name);
+                        const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+                        const validPhone = phone.length < 20;
+                        const validMessage = message.length > 2;
+                      }
+                      </script>
                     </form>
                   </div>
                   <div class="col-lg-6 col-md-6 centered">
@@ -57,36 +113,5 @@ include "assets/phpfunctions/header.php"; ?>
 	      		</div><!-- /row -->
 	    	</div> <!-- /container -->
 		</div><!-- /hello -->
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-    <script>
-    var handler = StripeCheckout.configure({
-      key: 'pk_live_r6alnlcg0s2Y923CV5JVutgd',
-      image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
-      locale: 'auto',
-      token: function(token) {
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
-      }
-    });
-
-    document.getElementById("customButton").addEventListener('click', function(e) {
-      // Open Checkout with further options:
-      handler.open({
-        name: "Contact Me",
-        description: "I don't like spam.",
-        amount: 100,
-        zipCode: true,
-        image: "https://stripe.com/img/documentation/checkout/marketplace.png",
-        locale: "auto",
-        email: document.getElementById("emailInput").value,
-      });
-      e.preventDefault();
-    });
-
-    // Close Checkout on page navigation:
-    window.addEventListener('popstate', function() {
-      handler.close();
-    });
-    </script>
 
     <?php include "assets/phpfunctions/footer.php"; ?>
