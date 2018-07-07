@@ -6,7 +6,6 @@ $img = "http://huguenotmuseum.org/wp-content/uploads/2015/03/contact-us1.jpg";
 $url = "https://evanmays.com/contact";
 
 include "assets/phpfunctions/header.php"; ?>
-      
 		<div id="hello">
 	    	<div class="container">
 	      		<div class="row">
@@ -25,7 +24,7 @@ include "assets/phpfunctions/header.php"; ?>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email Addres</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Enter email" name="email">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Phone Number</label>
@@ -35,7 +34,15 @@ include "assets/phpfunctions/header.php"; ?>
                         <label for="exampleInputPassword1">Message</label>
                         <textarea class="form-control" id="exampleInputPassword1" placeholder="Enter message" name="message" data-gramm="" data-txt_gramm_id="9f7cc126-b708-1d58-6d78-b0eef7a90e42"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
+                      <button type="submit" class="btn btn-default" id="customButton">Pay with Card</button>
+                      <div class="form-group">
+                        <label>
+                          My contact form costs $1 to use. The $1 prevents spam and makes sure I read every message.
+                        </label>
+                        <label>
+                          All credit card info is stored on Stripe or Apple's servers.
+                        </label>
+                      </div>
                     </form>
                   </div>
                   <div class="col-lg-6 col-md-6 centered">
@@ -50,5 +57,36 @@ include "assets/phpfunctions/header.php"; ?>
 	      		</div><!-- /row -->
 	    	</div> <!-- /container -->
 		</div><!-- /hello -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_live_r6alnlcg0s2Y923CV5JVutgd',
+      image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+      }
+    });
+
+    document.getElementById("customButton").addEventListener('click', function(e) {
+      // Open Checkout with further options:
+      handler.open({
+        name: "Contact Me",
+        description: "I don't like spam.",
+        amount: 100,
+        zipCode: true,
+        image: "https://stripe.com/img/documentation/checkout/marketplace.png",
+        locale: "auto",
+        email: document.getElementById("emailInput").value,
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation:
+    window.addEventListener('popstate', function() {
+      handler.close();
+    });
+    </script>
 
     <?php include "assets/phpfunctions/footer.php"; ?>

@@ -45,6 +45,8 @@
     <!-- END PRIVY WIDGET CODE -->
     <?php } ?>
 
+    <!-- Stripe Payments and Fraud Protection -->
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body>
