@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>👨🏿‍💻Evan Mays</title> 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="TODO">
+	<meta name="author" content="Evan Mays">
+	<meta name="google-site-verification" content="ESYt_bLI3ggJnOUMFqc-Gg5AODP6qbLGT3xl3BQNJqU" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+
+	<style>
+		body {
+			font-family: Lato;
+			margin: 0px;
+			display: grid;
+			grid-template-rows: 80px auto 1fr auto;
+			grid-template-areas:	"header"
+									"story"
+									"projects"
+									"business";
+		}
+		
+
+		header{
+			grid-area: header;
+			background: #f1f2f6;
+			padding: 0px 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header h1 {
+			margin: 0px;
+			color: #2f3542;
+			min-width: 160px;
+		}
+
+		header span {
+			display: none;
+		}
+
+		header .contactBtn {
+			width: 100%;
+		}
+
+		h2, h3, h4 {
+			color: #f1f2f6;
+		}
+
+		h4 {
+			margin-top: 0px;
+		}
+		h3 {
+			margin-bottom: 8px;
+		}
+
+		.column {
+			box-sizing: border-box;
+			padding: 20px;
+			color: #f1f2f6;
+		}
+
+		.column span {
+			display: none;
+		}
+
+		business {
+			grid-area: business;
+			background: #ff4757;
+			overflow-y: scroll
+		}
+
+		projects {
+			grid-area: projects;
+			background: #2f3542;
+			overflow-y: scroll
+		}
+
+		story {
+			grid-area: story;
+			background: #2ed573;
+			overflow-y: scroll;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		story footer {
+			text-align: center;
+		}
+
+		story footer p {
+			margin: 0px;
+		}
+
+		#bioAndImage {
+			text-align: left;
+		}
+
+		#bioAndImage img {
+			border-radius: 99999px;
+			max-width: 120px;
+		}
+
+		.icons {
+			text-align:center;
+			margin: 20px 0px;
+		}
+
+		.icons:hover {
+			opacity: .7;
+		}
+
+		#mediummark {
+			height: 54px;
+		}
+		#spotify {
+			margin: 0;
+
+		}
+
+		#me {
+			text-align: center;
+			margin: 8px;
+		}
+
+		#me img {
+			border-radius: 99999px;
+			max-width: 120px;
+		}
+
+		.panel {
+			padding: 16px 16px 4px 16px;
+			margin-bottom: 16px;
+			background: #57606f;
+		}
+
+		.panel h3 {
+			margin: 0px;
+		}
+
+		.panel-header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: bold;
+		}
+
+		.btn {
+			padding: 16px;
+			width: 300px;
+			border-radius: 9999px;
+			color: #f1f2f6;
+			background: #70a1ff;
+			border: 0px;
+			font-family: "Lato";
+			font-size: 16px;
+			margin: 0 auto;
+			margin-top: 32px;
+			display: block;
+		}
+
+		modal {
+			display: none;
+		}
+
+		@media only screen and (min-width: 600px) {
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 80px 1fr;
+				grid-template-areas:	"header header header"
+										"business projects story";
+			}
+
+			header{
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			header span {
+				display: inline;
+			}
+
+			header .contactBtn {
+				display: none;
+			}
+
+			.column span {
+				display: inline;
+			}
+
+			modal {
+				/*display: block;*/
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 700px;
+				max-width: 100%;
+				background: blue;
+				height: 500px;
+				max-height: 100%;
+				
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>👨🏿‍💻Evan Mays</h1>
+		<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" /><button onclick="doneBtn()">Done</button></span>
+		<button class="contactBtn" onclick="contactBtn()">Contact</button>
+	</header>
+
+	<business class="column">
+		<h2>Tech Strategy & Websites</h2>
+		<p>Design websites, manage WordPress installations, and set up payment gateways for clients.</p>
+		<p>
+			Since 2013, Recommend online software, develop software solutions used by 2,000+ people, design client websites, create website backends, manage hosting and creating private Facebook groups. Work with a broad spectrum of clients including individuals and non-profits such as The Links, Incorporated and Jack and Jill of America.
+		</p>
+		<p>
+			Below are just two of my clients.
+		</p>
+		<h3>Edward Vilga</h3>
+		<p>
+			Edward is a best-selling author. I redisgned his website, and now I'm managing the technology behind his online presence. This includes setting up new marketing websites for products he launches.
+		</p>
+		<p>
+			<a href="">edwardvilga.com</a>
+		</p>
+		<h3>Onief Samuels</h3>
+		<p>
+			I designed this site to be eveyrthing customers need when they land on a transportation companies website. Samuels Luxury Transpotation's phone number is boldly at the top of the site. Similar to Uber, customers can order rides through the website. Competitive advantage
+		</p>
+		<p>
+			<a href="">samuelsluxurytransportation.com</a>
+		</p>
+	</business>
+
+	<projects class="column">
+		<div class="panel-header"><h2>Coding Projects</h2> <span>Timeline View</span></div>
+		<div class="panel">
+			<div class="panel-header"><h3>MCU Tracker</h3>September 2018</div>
+			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>The Good Eats App</h3>August 2018</div>
+			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
+			<p>More details</p>
+		</div>
+		
+		<div class="panel">
+			<div class="panel-header"><h3>evanmays.com 4</h3> July 2018</div>
+			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>White Void: A VR Game</h3> January 2018</div>
+			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>SpotMe</h3> September 2017</div>
+			<p>A team of 4 freshmen won 2nd Place Overall at HopHacks (Johns Hopkins University's Hackathon)</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>6 Weeks in China and Taiwan</h3> April 2017</div>
+			<p>Wrote a whole blog about it</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>WP Newsletter Generator</h3> A while ago</div>
+			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
+			<p>More details</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>Word Bubble</h3> Also a while ago</div>
+			<p>SAT Study Tool</p>
+		</div>
+
+		<div class="panel">
+			<div class="panel-header"><h3>Beatwealth</h3> IDK a while ago</div>
+			<p>A platform for musicians to sell and distribute their music. Designed a music web player developed in PHP, MySQL, and JavaScript including automated mp3 delivery via email, a music-streaming server, and PayPal integration.<p>
+			<p>Marketed the product including blog outreach and strategic partnerships to grow a user base of over 100 musicians.</p>
+			<p>More details</p>
+		</div>
+		<br>
+		<p style="text-align: center">Wow you made it to the end. Congrats!</p>
+	</projects>
+
+	<story class="column">
+		<div>
+			<h2>My Story</h2>
+			<div id="bioAndImage"><img src="Evan_Mays-Winter_Spring-2017-square.jpeg" />
+				<p>
+					Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. My web design has evolved into tech strategy. I'm now studying Computer Science and Business at Johns Hopkins University.
+				</p>
+			</div>
+			<div class="icons"><a href=""><img src="Logo-2CRev-66px-R.png" /></a></div>
+			<div class="icons"><a href=""><img id="mediummark" src="Wordmark_White.svg" /></a></div>
+			<h3>Recently Played Music</h3>
+			<h4>Pulled from my Spotify</h4>
+			<iframe id="spotify" src="https://open.spotify.com/embed?uri=spotify:track:5f5r2N4Lp9WoULWPH9zp2W" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> <!-- used to be 300 width -->
+		</div>
+		<footer><p>&copy; 2018 Evan Mays</p><p>Credits</p></footer>
+	</story>
+
+	<modal>
+		issa timeline
+	</modal>
+
+	<script>
+		var fourthOfJuly = new Date("7/4/2018");
+		var todaysDate = new Date();
+
+		if(fourthOfJuly.setHours(0,0,0,0) == todaysDate.setHours(0,0,0,0)) {
+			if (confirm("It's the 4th of July. Do you want to see this site in 4th of July mode?")) {
+				var columns = document.getElementsByClassName("column");
+				columns[0].style.backgroundColor = "#d63031";
+				columns[1].style.backgroundColor = "#dfe6e9";
+				columns[1].style.color = "#2d3436";
+				columns[2].style.backgroundColor = "#d63031";
+				document.getElementsByTagName("header")[0].style.backgroundColor = "#0984e3";
+				document.getElementsByTagName("header")[0].style.color = "#dfe6e9";
+			}
+		}
+
+		function contactBtn() {
+			
+		}
+
+		function doneBtn() {
+			var interest = document.getElementById("interest").value
+			var email = document.getElementById("email").value
+			sendEmail(interest, email)
+		}
+
+		function sendEmail(interest, email) {
+			var data = { "interest": interest, "email": email};
+			sendRequest("https://evanmays.com/api/contact", function() {
+				alert("done")
+			}, data)
+		}
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+	<script>
+		/*TweenMax.to("body", 2, {
+			ease: Power0.easeNone,
+			"grid-template-columns": "0fr 1fr 0fr",
+		});*/
+	</script>
+	<script>
+		function sendRequest(url,callback,postData) {
+		    var req = new XMLHttpRequest();
+		    if (!req) return;
+		    var method = (postData) ? "POST" : "GET";
+		    req.open(method,url,true);
+		    //req.setRequestHeader('User-Agent','XMLHTTP/1.0');
+		    if (postData)
+		        //req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+		    req.onreadystatechange = function () {
+		        if (req.readyState != 4) return;
+		        if (req.status != 200 && req.status != 304) {
+		         alert('HTTP error ' + req.status);
+		         console.log(req)
+		            return;
+		        }
+		        callback(req);
+		    }
+		    if (req.readyState == 4) return;
+		    req.send(postData);
+		}
+	</script>
+</body>
+</html>
