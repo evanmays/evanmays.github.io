@@ -50,6 +50,15 @@
 			width: 100%;
 		}
 
+		#contactForm {
+			margin: 8px 0px;
+		}
+
+		#contactForm span {
+			display: block;
+			text-align: center;
+		}
+
 		h2, h3, h4 {
 			color: #f1f2f6;
 		}
@@ -197,6 +206,10 @@
 				display: none;
 			}
 
+			#contactForm span {
+				display: inline;
+			}
+
 			.column span {
 				/*display: inline;*/
 			}
@@ -213,10 +226,6 @@
 				height: 500px;
 				max-height: 100%;
 			}
-
-			
-
-
 		}
 	</style>
 </head>
@@ -227,7 +236,7 @@
 		<button class="contactBtn" onclick="contactBtn()">Contact</button>
 		<!-- Shows default on desktop. Shows on mobile if you click the above button -->
 		<div id="contactForm">
-			I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" onchange="validateEmail()" /><button onclick="doneBtn()">Done</button>
+			<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>,</span> <span>and you can contact me at <input placeholder="email address" type="email" id="email" onchange="validateEmail()" /></span><span><button onclick="doneBtn()">Done</button></span>
 		</div>
 	</header>
 
@@ -321,7 +330,7 @@
 			<p>Marketed the product including blog outreach and strategic partnerships to grow a user base of over 100 musicians.</p>
 		</div>
 		<br>
-		<p style="text-align: center">Wow you made it to the end. Congrats!</p>
+		<p style="text-align: center">Wow, you made it to the end. Congrats!</p>
 	</projects>
 
 	<story class="column">
