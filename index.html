@@ -18,7 +18,7 @@
 			font-family: Lato;
 			margin: 0px;
 			display: grid;
-			grid-template-rows: 80px auto 1fr auto;
+			grid-template-rows: auto auto 1fr auto;
 			grid-template-areas:	"header"
 									"story"
 									"projects"
@@ -29,7 +29,7 @@
 		header{
 			grid-area: header;
 			background: #f1f2f6;
-			padding: 0px 20px;
+			padding: 10px 20px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -42,7 +42,7 @@
 			min-width: 160px;
 		}
 
-		header span {
+		header div {
 			display: none;
 		}
 
@@ -182,13 +182,14 @@
 										"business projects story";
 			}
 
-			header{
+			header {
+				padding: 0px 20px;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
 			}
 
-			header span {
+			header div {
 				display: inline;
 			}
 
@@ -197,7 +198,7 @@
 			}
 
 			.column span {
-				display: inline;
+				/*display: inline;*/
 			}
 
 			modal {
@@ -222,42 +223,49 @@
 <body>
 	<header>
 		<h1>👨🏿‍💻Evan Mays</h1>
-		<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" onchange="validateEmail()" /><button onclick="doneBtn()">Done</button></span>
+		<!-- Shows on Mobile, NOT desktop -->
 		<button class="contactBtn" onclick="contactBtn()">Contact</button>
+		<!-- Shows default on desktop. Shows on mobile if you click the above button -->
+		<div id="contactForm">
+			I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" onchange="validateEmail()" /><button onclick="doneBtn()">Done</button>
+		</div>
 	</header>
 
 	<business class="column">
 		<h2>Tech Strategy & Websites</h2>
-		<p>Design websites, manage WordPress installations, and set up payment gateways for clients.</p>
+		<p>I started designing websites in 2013. I now take things a step further and help client's use all sorts of platforms to market their products/services online. </p>
+
+		<p>Some services I provide include:</p>
+		<ul>
+			<li>Design websites</li>
+			<li>Manage WordPress installations</li>
+			<li>Manage your server</li>
+			<li>Set up payment gateways</li>
+			<li>Create private Facebook groups</li>
+			<li>Develop custom software</li>
+			<li>Develop Wordpress plugins</li>
+			<li>Launch online courses</li>
+		</ul>
 		<p>
-			Since 2013, Recommend online software, develop software solutions used by 2,000+ people, design client websites, create website backends, manage hosting and creating private Facebook groups. Work with a broad spectrum of clients including individuals and non-profits such as The Links, Incorporated and Jack and Jill of America.
-		</p>
-		<p>
-			Below are just two of my clients.
+			Just two of my clients include:
 		</p>
 		<h3>Edward Vilga</h3>
 		<p>
-			Edward is a best-selling author. I redisgned his website, and now I'm managing the technology behind his online presence. This includes setting up new marketing websites for products he launches.
+			Best-selling author. I initially cleaned up his server which was crashing due to too many website visitors. I redisgned his website, and now I'm managing the technology behind his online presence.
 		</p>
+		<h3>Samuels Luxury Transportation</h3>
 		<p>
-			<a href="">edwardvilga.com</a>
-		</p>
-		<h3>Onief Samuels</h3>
-		<p>
-			I designed this site to be eveyrthing customers need when they land on a transportation companies website. Samuels Luxury Transpotation's phone number is boldly at the top of the site. Similar to Uber, customers can order rides through the website. Competitive advantage
-		</p>
-		<p>
-			<a href="">samuelsluxurytransportation.com</a>
+			Succeeding small business based outside of Boston. I designed their website from scratch and implemented online reservations for a competitive advantage. I also update their information in Google Maps.
 		</p>
 	</business>
 
 	<projects class="column">
 		<div class="panel-header"><h2>Coding Projects</h2> <span>Timeline View</span></div>
-		<div class="panel">
+		<!-- <div class="panel">
 			<div class="panel-header"><h3>MCU Tracker</h3>September 2018</div>
 			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
 			<p>More details</p>
-		</div>
+		</div> -->
 
 		<div class="panel">
 			<div class="panel-header"><h3>The Good Eats App</h3>August 2018</div>
@@ -274,13 +282,12 @@
 		<div class="panel">
 			<div class="panel-header"><h3>White Void: A VR Game</h3> January 2018</div>
 			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
-			<p>More details</p>
 		</div>
 
 		<div class="panel">
 			<div class="panel-header"><h3>SpotMe</h3> September 2017</div>
 			<p>A team of 4 freshmen won 2nd Place Overall at HopHacks (Johns Hopkins University's Hackathon)</p>
-			<p>More details</p>
+			<p>View full writeup</p>
 		</div>
 
 		<div class="panel">
@@ -290,21 +297,28 @@
 		</div>
 
 		<div class="panel">
-			<div class="panel-header"><h3>WP Newsletter Generator</h3> A while ago</div>
-			<p>THis app is amazing. Look at how amazing it is. Wow it's amazing. WOW that's fantastic</p>
-			<p>More details</p>
+			<div class="panel-header"><h3>WP Newsletter Generator</h3> July 2016</div>
+			<p>Developed in PHP, MySQL, and Javascript</p>
+			<p>My wordpress plugin connects Mailchimp to The Events Calendar plugin.</p>
+			<p>Features include:</p>
+			<ul>
+				<li>Export events from your calendar to Mailchimp</li>
+				<li>One license for all your websites</li>
+				<li>Contact me for support</li>
+				<li>Instant Download</li>
+			</ul>
 		</div>
 
 		<div class="panel">
-			<div class="panel-header"><h3>Word Bubble</h3> Also a while ago</div>
+			<div class="panel-header"><h3>Word Bubble</h3> August 2015</div>
+			<p>Final project for All Star Code</p>
 			<p>SAT Study Tool</p>
 		</div>
 
 		<div class="panel">
-			<div class="panel-header"><h3>Beatwealth</h3> IDK a while ago</div>
+			<div class="panel-header"><h3>Beatwealth</h3> June 2013</div>
 			<p>A platform for musicians to sell and distribute their music. Designed a music web player developed in PHP, MySQL, and JavaScript including automated mp3 delivery via email, a music-streaming server, and PayPal integration.<p>
 			<p>Marketed the product including blog outreach and strategic partnerships to grow a user base of over 100 musicians.</p>
-			<p>More details</p>
 		</div>
 		<br>
 		<p style="text-align: center">Wow you made it to the end. Congrats!</p>
@@ -314,18 +328,18 @@
 		<div>
 			<h2>My Story</h2>
 			<p>
-				Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. My web design has evolved into tech strategy. I'm now studying Computer Science and Business at Johns Hopkins University.
+				Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. I'm now studying Computer Science Engineering and Business at Johns Hopkins University.
 			</p>
-			<a href="#">
+			<a href="https://www.linkedin.com/in/evan-mays" target="_blank">
 				<div id="meAndLinkedin">
 					<img id="me" src="Evan_Mays-Winter_Spring-2017-square.jpeg" /><img id="linkedin" src="Logo-2CRev-66px-R.png" />
 				</div>
 			</a>
-			<h3>Recently Played Music</h3>
+			<!-- <h3>Recently Played Music</h3>
 			<h4>Pulled from my Spotify</h4>
 			<iframe id="spotify" src="https://open.spotify.com/embed?uri=spotify:track:5f5r2N4Lp9WoULWPH9zp2W" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> <!-- used to be 300 width -->
 		</div>
-		<footer><p>&copy; 2018 Evan Mays</p><p>Credits</p></footer>
+		<footer><p>&copy; 2018 Evan Mays</p></footer>
 	</story>
 
 	<modal>
@@ -350,6 +364,8 @@
 
 		function contactBtn() {
 			//show the stuffs
+			var contactForm = document.getElementById('contactForm');
+			contactForm.style.display = "inline";
 		}
 
 		function doneBtn() {
@@ -359,7 +375,7 @@
 		}
 
 		function sendEmail(interest, email) {
-			alert("Thanks, I'll reach out to you shortly at " + email + "!")
+			alert("Thanks, I'll reach out to you shortly at " + email)
 			var data = { "interest": interest, "email": email};
 			/*sendRequest("https://evanmays.com/api/contact", function() {
 				alert("done")
