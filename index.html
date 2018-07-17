@@ -99,37 +99,39 @@
 			margin: 0px;
 		}
 
-		#bioAndImage {
-			text-align: left;
-		}
-
-		#bioAndImage img {
-			border-radius: 99999px;
-			max-width: 120px;
-		}
-
-		.icons {
+		#meAndLinkedin {
 			text-align:center;
 			margin: 20px 0px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 
-		.icons:hover {
+		#meAndLinkedin:hover {
 			opacity: .7;
+		}
+
+		#linkedin {
+			width: 100%;
+			max-width: 250px;
+			height: auto;
+			align-self: center;
+			margin: 8px;
+		}
+
+		#me {
+			margin: 8px;	
+			border-radius: 99999px;
+			max-width: 100px;
+			height: auto;
+			align-self: center;
 		}
 
 		#spotify {
 			margin: 0;
 
-		}
-
-		#me {
-			text-align: center;
-			margin: 8px;
-		}
-
-		#me img {
-			border-radius: 99999px;
-			max-width: 120px;
 		}
 
 		.panel {
@@ -209,8 +211,11 @@
 				background: blue;
 				height: 500px;
 				max-height: 100%;
-				
 			}
+
+			
+
+
 		}
 	</style>
 </head>
@@ -308,12 +313,14 @@
 	<story class="column">
 		<div>
 			<h2>My Story</h2>
-			<div id="bioAndImage"><img src="Evan_Mays-Winter_Spring-2017-square.jpeg" />
-				<p>
-					Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. My web design has evolved into tech strategy. I'm now studying Computer Science and Business at Johns Hopkins University.
-				</p>
-			</div>
-			<div class="icons"><a href=""><img src="Logo-2CRev-66px-R.png" /></a></div>
+			<p>
+				Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. My web design has evolved into tech strategy. I'm now studying Computer Science and Business at Johns Hopkins University.
+			</p>
+			<a href="#">
+				<div id="meAndLinkedin">
+					<img id="me" src="Evan_Mays-Winter_Spring-2017-square.jpeg" /><img id="linkedin" src="Logo-2CRev-66px-R.png" />
+				</div>
+			</a>
 			<h3>Recently Played Music</h3>
 			<h4>Pulled from my Spotify</h4>
 			<iframe id="spotify" src="https://open.spotify.com/embed?uri=spotify:track:5f5r2N4Lp9WoULWPH9zp2W" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> <!-- used to be 300 width -->
@@ -363,7 +370,7 @@
 			var email = document.getElementById("email").value;
 			//due to Regex expressions being terrible at recognizing unique emails,
 			//I'm only going to test for the @ sign and a period.
-			var re = ^\S+@\S+$;
+			var re = /^\S+@\S+$/;
 
 			if (re.test(String(email).toLowerCase())) {
 				
