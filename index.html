@@ -117,9 +117,6 @@
 			opacity: .7;
 		}
 
-		#mediummark {
-			height: 54px;
-		}
 		#spotify {
 			margin: 0;
 
@@ -220,7 +217,7 @@
 <body>
 	<header>
 		<h1>👨🏿‍💻Evan Mays</h1>
-		<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" /><button onclick="doneBtn()">Done</button></span>
+		<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>, and you can contact me at <input placeholder="email" type="email" id="email" onchange="validateEmail()" /><button onclick="doneBtn()">Done</button></span>
 		<button class="contactBtn" onclick="contactBtn()">Contact</button>
 	</header>
 
@@ -317,7 +314,6 @@
 				</p>
 			</div>
 			<div class="icons"><a href=""><img src="Logo-2CRev-66px-R.png" /></a></div>
-			<div class="icons"><a href=""><img id="mediummark" src="Wordmark_White.svg" /></a></div>
 			<h3>Recently Played Music</h3>
 			<h4>Pulled from my Spotify</h4>
 			<iframe id="spotify" src="https://open.spotify.com/embed?uri=spotify:track:5f5r2N4Lp9WoULWPH9zp2W" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> <!-- used to be 300 width -->
@@ -346,7 +342,7 @@
 		}
 
 		function contactBtn() {
-			
+			//show the stuffs
 		}
 
 		function doneBtn() {
@@ -356,10 +352,25 @@
 		}
 
 		function sendEmail(interest, email) {
+			alert("Thanks, I'll reach out to you shortly at " + email + "!")
 			var data = { "interest": interest, "email": email};
-			sendRequest("https://evanmays.com/api/contact", function() {
+			/*sendRequest("https://evanmays.com/api/contact", function() {
 				alert("done")
-			}, data)
+			}, data)*/
+		}
+
+		function validateEmail() {
+			var email = document.getElementById("email").value;
+			//due to Regex expressions being terrible at recognizing unique emails,
+			//I'm only going to test for the @ sign and a period.
+			var re = ^\S+@\S+$;
+
+			if (re.test(String(email).toLowerCase())) {
+				
+			}
+			else {
+
+			}
 		}
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
