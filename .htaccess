@@ -1,5 +1,3 @@
-# BEGIN hiding .php extension
-
 RewriteEngine On
 
 # Unless directory, remove trailing slash
@@ -12,20 +10,12 @@ RewriteRule (index)\.php$ /$1 [R=301,L]
 #RewriteRule ^(.+)\.php$ /$1 [R=301,L]
 
 # Redirect external .php requests to extensionless url for all-websites.php
-RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
-RewriteRule (all-websites)\.php$ /$1 [R=301,L] #
+#RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+#RewriteRule (all-websites)\.php$ /$1 [R=301,L] #
 
 # Redirect external .php requests to extensionless url for websites.php
-RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
-RewriteRule (websites)\.php$ /$1 [R=301,L] #
-
-# Redirect external .php requests to extensionless url for wordpressplugins.php
-RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
-RewriteRule (wordpressplugins)\.php$ /$1 [R=301,L] #
-
-# Redirect external .php requests to extensionless url for contact.php
-RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
-RewriteRule (contact)\.php$ /$1 [R=301,L] #
+#RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+#RewriteRule (websites)\.php$ /$1 [R=301,L] #
 
 # Redirect external .php requests to extensionless url for <anyblogpost>.php
 RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
@@ -35,8 +25,6 @@ RewriteRule (blog/.+)\.php$ /$1 [R=301,L] #
 RewriteRule ^([^/.]+)$ $1.php [L]
 RewriteCond %{REQUEST_FILENAME}.php -f [NC]
 RewriteRule ^ %{REQUEST_URI}.php [L]
-#END hiding .php extension
-
 
 #404 Page
 ErrorDocument 404 /404.php

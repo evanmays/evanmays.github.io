@@ -18,4 +18,18 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
 
+
+//send push notification via Pushover
+curl_setopt_array($ch = curl_init(), array(
+	CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+	CURLOPT_POSTFIELDS => array(
+		"token" => "a4y2c357i7qntvm8gd57yxg1hz1ghn",
+		"user" => "u9y2drum4mxvimyfvrs33ok8x6g7p4",
+		"message" => $email_message,
+	),
+	CURLOPT_SAFE_UPLOAD => true,
+	CURLOPT_RETURNTRANSFER => true,
+));
+curl_exec($ch);
+curl_close($ch);
 ?>
