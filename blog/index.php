@@ -64,4 +64,4 @@ function displayPostInBox($title, $date, $img, $snippet, $link) {
 	    	</div> <!-- /container -->
 		</div><!-- /hello -->
 
-    <?php include "../assets/phpfunctions/footer.php"; ?>
+<?php include "../assets/phpfunctions/footer.php"; ?>
