@@ -9,6 +9,31 @@ body {
 							"business";
 }
 
+a {
+	color: #f1f2f6;
+	font-family: helvetica;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #f1f2f6;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #f1f2f6;
+}
+
+a:visited {
+	color: #f1f2f6;
+}
+
+.column {
+	font-size: 16px;
+    line-height: 24px;
+}
+
 
 header{
 	grid-area: header;
@@ -31,7 +56,7 @@ header div {
 }
 
 header .contactBtn {
-	width: 100%;
+	width: 200px;
 }
 
 #contactForm {
