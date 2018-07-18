@@ -28,7 +28,6 @@ curl_setopt_array($ch = curl_init(), array(
 		"user" => $envConstants["pushover"]['user'],
 		"message" => $email_message,
 	),
-	CURLOPT_SAFE_UPLOAD => true,
 	CURLOPT_RETURNTRANSFER => true,
 ));
 curl_exec($ch);

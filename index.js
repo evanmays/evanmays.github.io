@@ -32,10 +32,9 @@ function doneBtn() {
 
 function sendEmail(interest, email) {
 	//notify me of a contact request
-	var data = { "interest": interest, "email": email};
 	sendRequest("https://evanmays.com/logContactRequest.php", function() {
 		alert("Thanks, I'll reach out to you shortly at " + email)
-	}, data);
+	}, interest, email);
 }
 
 /*
@@ -54,23 +53,21 @@ function validateEmail() {
 }
 */
 
-function sendRequest(url,callback,postData) {
-    var req = new XMLHttpRequest();
-    if (!req) return;
-    var method = (postData) ? "POST" : "GET";
-    req.open(method,url,true);
-    //req.setRequestHeader('User-Agent','XMLHTTP/1.0');
-    if (postData)
-        //req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-    req.onreadystatechange = function () {
-        if (req.readyState != 4) return;
-        if (req.status != 200 && req.status != 304) {
-         alert('HTTP error ' + req.status);
-         console.log(req)
-            return;
-        }
-        callback(req);
-    }
-    if (req.readyState == 4) return;
-    req.send(postData);
+function sendRequest(url,callback,interest, email) {
+	var req = new XMLHttpRequest();
+	if (!req) return;
+	req.open("POST",url,true);
+	//req.setRequestHeader('User-Agent','XMLHTTP/1.0');
+	req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+	req.onreadystatechange = function () {
+		if (req.readyState != 4) return;
+		if (req.status != 200 && req.status != 304) {
+		alert('HTTP error ' + req.status);
+		console.log(req)
+			return;
+		}
+		callback(req);
+	}
+	if (req.readyState == 4) return;
+	req.send("interest="+interest+"&email="+email);
 }
