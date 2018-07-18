@@ -9,7 +9,7 @@
  
 /* FONTS */
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:900);
 
 /* OVERALL ASPECT */
 
@@ -28,7 +28,7 @@ body {
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
-    font-weight: 300;
+    font-weight: 900;
     color: #555;
     text-align: left;
 }
@@ -142,12 +142,7 @@ a:after {
 
 #hello h1 {
 	font-size: 90px;
-	font-weight: 700;
 	letter-spacing: 3px;
-}
-
-#hello h2 {
-	font-weight: 400;
 }
 
 /* Green */
@@ -369,7 +364,7 @@ a:link {
 #hello h1#titleline {
 	margin:0px;
 	font-size: 60px;
-	font-weight: 700;
+	font-weight: 900;
 	letter-spacing: 0px;
 	line-height: 1em;
 }

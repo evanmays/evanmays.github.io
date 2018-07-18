@@ -1,4 +1,5 @@
 <?php
+require("../envConstants.php");
 function clean_string($string) {
   $bad = array("content-type","bcc:","to:","cc:","href", "<script");
   return str_replace($bad,"",$string);
@@ -23,8 +24,8 @@ $headers = 'From: '.$email_from."\r\n".
 curl_setopt_array($ch = curl_init(), array(
 	CURLOPT_URL => "https://api.pushover.net/1/messages.json",
 	CURLOPT_POSTFIELDS => array(
-		"token" => "a4y2c357i7qntvm8gd57yxg1hz1ghn",
-		"user" => "u9y2drum4mxvimyfvrs33ok8x6g7p4",
+		"token" => $envConstants["pushover"]['token'],
+		"user" => $envConstants["pushover"]['user'],
 		"message" => $email_message,
 	),
 	CURLOPT_SAFE_UPLOAD => true,

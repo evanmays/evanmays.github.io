@@ -1,13 +1,13 @@
 <?php
 //store in the same folder as public_html
 
-$stripe = array(
-  "secret_key"      => "placeholder",
-  "publishable_key" => "placeholder"
+$pushover = array(
+	"token" => "tokengoeshere",
+	"user" => "usergoeshere",
 );
 
 $envConstants = array(
-	"stripe" => $stripe
+	"pushover" => $pushover
 )
 
 ?>
