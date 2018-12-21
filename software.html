@@ -27,7 +27,7 @@
 	
 	<!-- Custom styles -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-	<link href="/index.css" rel="stylesheet">
+	<link href="/software.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -36,56 +36,26 @@
 	<![endif]-->
 </head>
 <body>
+<container>
 	<header>
 		<h1>👨🏿‍💻Evan Mays</h1>
-		<!-- Shows on Mobile, NOT desktop -->
-		<button class="contactBtn" onclick="contactBtn()">Contact</button>
-		<!-- Shows default on desktop. Shows on mobile if you click the above button -->
-		<div id="contactForm">
-			<span>I'm interested in <select id="interest"><option selected>tech strategy</option><option>your coding projects</option><option>interviewing you</option></select>,</span> <span>and you can contact me at <input placeholder="email address" type="email" id="email" onchange="validateEmail()" /></span><span><button onclick="doneBtn()">Done</button></span>
-		</div>
+		Home Software Blog
 	</header>
+	<content class="column">
+		<h2>Software</h2>&#9679;
+		<div class="panels">
+		
 
-	<business class="column">
-		<h2>Tech Strategy & Websites</h2>
-		<p>I started designing websites in 2013. I now take things a step further and help client's use all sorts of platforms to market their products/services online. </p>
-
-		<p>Some services I provide include:</p>
-		<ul>
-			<li>Design websites</li>
-			<li>Manage WordPress installations</li>
-			<li>Manage your server</li>
-			<li>Set up payment gateways</li>
-			<li>Create private Facebook groups</li>
-			<li>Develop custom software</li>
-			<li>Develop WordPress plugins</li>
-			<li>Launch online courses</li>
-		</ul>
-		<p>
-			Just two of my clients include:
-		</p>
-		<h3>Edward Vilga</h3>
-		<p>
-			Best-selling author. I initially cleaned up his server which was crashing due to too many website visitors. I redesigned his website, and now I'm managing the technology behind his online presence.
-		</p>
-		<h3>Samuels Luxury Transportation</h3>
-		<p>
-			Succeeding small business based outside of Boston. I designed their website from scratch and implemented online reservations for a competitive advantage. I also update their information in Google Maps.
-		</p>
-	</business>
-
-	<projects class="column">
-		<div class="panel-header"><h2>Coding Projects</h2> <span>Timeline View</span></div>
-
-		<div class="panel">
+		<div class="panel" style="grid-area: whitevoid">
 			<div class="panel-header"><h3>White Void: A VR Game</h3> January 2018</div>
-			<p>Developed in WebVR, A-Frame, and Javascript</p>
+			<a href="/blog"><img src="assets/img/White-Void-first-logo.jpg"></a>
+			<!-- <p>Developed in WebVR, A-Frame, and Javascript</p>
 			<p>In 21 days, I made a demo version of a sci-fi target-practice game. The game includes custom designs, background music, and scorekeeping.</p>
 			<p>I blogged about my experience daily.</p>
-			<p><a href="https://evanmays.com/blog/">View blog</a></p>
+			<p><a href="https://evanmays.com/blog/">View blog</a></p>-->
 		</div>
 
-		<div class="panel">
+		<div class="panel" style="grid-area: spotme">
 			<div class="panel-header"><h3>SpotMe</h3> September 2017</div>
 			<p>2nd Place out of 100+ teams at <a href="https://hophacks.com/">HopHacks</a></p>
 			<p>Developed in HTML5, CSS3, Javascript, with Firebase Database, Google Maps API, and Capital One API.</p>
@@ -99,7 +69,7 @@
 			<p>More details</p>
 		</div> -->
 
-		<div class="panel">
+		<div class="panel" style="grid-area: wordpress">
 			<div class="panel-header"><h3>WP Newsletter Generator</h3> July 2016</div>
 			<p>Developed in PHP, MySQL, and Javascript</p>
 			<p>My WordPress plugin connects Mailchimp to The Events Calendar plugin.</p>
@@ -113,37 +83,23 @@
 			<p>This project is in use at <a href="http://jamaica311.com/events/">jamaica311.com</a></p>
 		</div>
 
-		<div class="panel">
+		<div class="panel" style="grid-area: wordbubble">
 			<div class="panel-header"><h3>Word Bubble</h3> August 2015</div>
 			<p>Final project for All Star Code Summer Intensive at Microsoft's office in NYC.</p>
 			<p>Our goal was to reduce the education gap with an app. We wanted a game straightforward and interactive for people to waste time on but at the same time learn new words.</p>
 			<p>Our final product, a cross-platform iOS and Android app was an SAT Study tool.</p>
 		</div>
 
-		<div class="panel">
+		<div class="panel" style="grid-area: beatwealth">
 			<div class="panel-header"><h3>Beatwealth</h3> June 2013</div>
 			<p>A platform for musicians to sell and distribute their music. Designed a music web player developed in PHP, MySQL, and JavaScript including automated mp3 delivery via email, a music-streaming server, and PayPal integration.<p>
 			<p>Marketed the product including blog outreach and strategic partnerships to grow a user base of over 100 musicians.</p>
 		</div>
-		<br>
-		<p style="text-align: center">Wow, you made it to the end. Congrats!</p>
-	</projects>
+	</div>
+	&#9679;
+	</content>
 
-	<story class="column">
-		<div>
-			<h2>My Story</h2>
-			<p>
-				Inspired by the technology in the 2008 Iron Man movie, I picked up coding at 11. I made computer games and websites. Later I launched a startup, Beatwealth.com, and a web design business. I'm now studying Computer Science Engineering and Business at Johns Hopkins University.
-			</p>
-			<a href="https://www.linkedin.com/in/evan-mays" target="_blank">
-				<div id="meAndLinkedin">
-					<img id="me" src="Evan_Mays-Winter_Spring-2017-Square.jpeg" /><img id="linkedin" src="Logo-2CRev-66px-R.png" />
-				</div>
-			</a>
-		</div>
-		<footer><p>&copy; 2018 Evan Mays</p></footer>
-	</story>
-
-	<script src="index.js"></script>
+</container>
+<script src="index.js"></script>
 </body>
 </html>
