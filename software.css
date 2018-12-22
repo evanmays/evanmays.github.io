@@ -11,6 +11,10 @@ container {
 	padding: 30px 0;
 }
 
+.menu {
+	display:none;
+}
+
 a {
 	color: #f1f2f6;
 	font-family: helvetica;
@@ -30,6 +34,7 @@ a:active {
 a:visited {
 	color: #f1f2f6;
 }
+
 
 
 
@@ -129,5 +134,13 @@ content {
 		grid-template-areas:	"algobender whitevoid"
 								"spotme wordpress"
 								"wordbubble beatwealth";
+	}
+
+	.menu {
+		display:block;
+	}
+
+	.menubtn {
+		display:none;
 	}
 }
