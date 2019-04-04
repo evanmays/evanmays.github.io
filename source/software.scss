@@ -1,0 +1,47 @@
+@import 'main';
+
+.panel {
+	margin: 20px 37.5px 0px 37.5px;
+
+	height: auto;
+	@media screen and (min-width: $break-desktop) {
+		margin: 0px 37.5px;
+		height: 170px;
+	}
+	
+	.panel-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		opacity: .7;
+		transition: opacity .3s ease-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.panels-row {
+	width: 100%;
+	display: flex;
+	flex: 1;
+
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	@media screen and (min-width: $break-desktop) {
+		margin-top: 20px;
+
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+    }
+}

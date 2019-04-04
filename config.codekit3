@@ -39,13 +39,26 @@
 		"oAP": "/build/404.php",
 		"oF": 0
 		},
+	"/source/_main.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/_main.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/source/assets/css/main.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/assets/css/main-min.css",
+		"oAP": "/build/assets/css/main.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -82,6 +95,16 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/source/assets/img/back.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/back.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/source/assets/img/Beatwealth-Logo-2014.jpg": {
 		"ft": 16384,
 		"iS": 94381,
@@ -92,6 +115,16 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/source/assets/img/chat.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/chat.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/source/assets/img/enemy-character-before-and-after-photoshop.png": {
 		"ft": 32768,
@@ -169,6 +202,49 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/source/assets/img/In-Black-41px-R.png": {
+		"ft": 32768,
+		"iS": 1340,
+		"oA": 0,
+		"oAP": "/build/assets/img/In-Black-41px-R.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/source/assets/img/In-White-41px-R.png": {
+		"ft": 32768,
+		"iS": 480,
+		"oA": 0,
+		"oAP": "/build/assets/img/In-White-41px-R.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/source/assets/img/Instagram-glyph-logo_May2016.png": {
+		"ft": 32768,
+		"iS": 12224,
+		"oA": 0,
+		"oAP": "/build/assets/img/Instagram-glyph-logo_May2016.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/source/assets/img/Menu.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/Menu.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/source/assets/img/my-virtual-world-take-1.png": {
 		"ft": 32768,
@@ -324,6 +400,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/source/assets/img/White-Void-logo-resized.jpg": {
+		"ft": 16384,
+		"iS": 86667,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/assets/img/White-Void-logo-resized.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
 	"/source/assets/img/Word-Bubble-Logo.jpg": {
 		"ft": 16384,
 		"iS": 30272,
@@ -345,6 +432,17 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/source/assets/img/youtube_social_icon_dark.png": {
+		"ft": 32768,
+		"iS": 42646,
+		"oA": 0,
+		"oAP": "/build/assets/img/youtube_social_icon_dark.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
 		},
 	"/source/assets/phpfunctions/blogfooter.php": {
 		"cB": 0,
@@ -509,16 +607,6 @@
 		"opt": 1,
 		"q": 100
 		},
-	"/source/index.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/index-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -537,6 +625,19 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/source/index.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/index.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		},
 	"/source/logContactRequest.php": {
 		"cB": 0,
@@ -576,16 +677,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/source/software.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/software-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/source/software.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -593,6 +684,19 @@
 		"oA": 0,
 		"oAP": "/build/software.html",
 		"oF": 0
+		},
+	"/source/software.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/software.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		}
 	},
 "hooks": [
@@ -605,11 +709,11 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-kahn",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 574886821.55834305
+	"lastBuiltDate": 574911829.458745
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
