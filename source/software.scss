@@ -1,9 +1,14 @@
 @import 'main';
 
 .panel {
-	margin: 20px 37.5px 0px 37.5px;
+	margin: 20px 10px 0px 10px;
 
-	height: auto;
+
+	@media screen and (max-width: $break-mobile) {
+		width:300px;
+		height: 170px;
+	}
+
 	@media screen and (min-width: $break-desktop) {
 		margin: 0px 37.5px;
 		height: 170px;

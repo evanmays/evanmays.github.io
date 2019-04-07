@@ -45,13 +45,21 @@ container {
 
 header {
 	grid-area: header;
-	margin: 20px 0 0 0;
+	margin: 40px 0 0 0;
 	display: flex;
 	flex: 1;
 
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+
+	.one-third:last-child {
+		@media screen and (max-width: $break-mobile) {
+			margin-top: 20px;
+			line-height: 0px;
+		}
+	}
+	
 
 	@media screen and (min-width: $break-desktop) {
 		margin: 60px 0 0 0;
@@ -66,7 +74,6 @@ header {
 
 
 	#menuBtn {
-		margin-top: 20px;
 		width: 32px;
 		height: 32px;
 		@media screen and (min-width: $break-desktop) {
@@ -248,6 +255,8 @@ h2 {
 	font-size: $h2-font-size-phone;
 	line-height: 82px;
 	@media screen and (max-width: $break-mobile) {
+		line-height: 57px;
+		margin: 20px 0 0 0;
 		font-weight: 300;
 	}
 	@media screen and (min-width: $break-desktop) {
@@ -299,6 +308,7 @@ aside.sidebar {
 		font-family: $font-stack-body;
 	}
 	footer {
+		line-height: normal;
 		margin: 60px auto 0px auto;
 	}
 

@@ -225,6 +225,17 @@
 		"oT": 1,
 		"q": 90
 		},
+	"/source/assets/img/Instagram-glyph-logo_May2016-white.png": {
+		"ft": 32768,
+		"iS": 1911,
+		"oA": 0,
+		"oAP": "/build/assets/img/Instagram-glyph-logo_May2016-white.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
 	"/source/assets/img/Instagram-glyph-logo_May2016.png": {
 		"ft": 32768,
 		"iS": 12224,
@@ -438,6 +449,17 @@
 		"iS": 42646,
 		"oA": 0,
 		"oAP": "/build/assets/img/youtube_social_icon_dark.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/source/assets/img/yt_icon_mono_dark.png": {
+		"ft": 32768,
+		"iS": 7418,
+		"oA": 0,
+		"oAP": "/build/assets/img/yt_icon_mono_dark.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -709,7 +731,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-kahn",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 574911829.458745
+	"lastBuiltDate": 576368102.42423606
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
