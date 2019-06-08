@@ -33,6 +33,20 @@
 	}
 }
 
+.bio-row {
+	max-width: 522px;
+	border-left: 5px solid #707070;
+	padding: 0px 20px;
+	margin: 40px 0;
+	p:first-child {
+		margin-top: 0px;
+	}
+	p:last-child {
+		margin-bottom: 0px;
+	}
+
+}
+
 .panels-row {
 	width: 100%;
 	display: flex;
