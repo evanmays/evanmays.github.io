@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Today is day 15 of my challenge to learn virtual reality development in 21 days. I'm two-thirds done! My game was running slow, so I optimized it today.">
+<title>I'm Learning VR Day 15: Optimizing my Game</title>
+<meta name="author" content="Evan Mays">
+<meta name="google-site-verification" content="ESYt_bLI3ggJnOUMFqc-Gg5AODP6qbLGT3xl3BQNJqU" />
+
+<meta property="og:title" content="I'm Learning VR Day 15: Optimizing my Game" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Today is day 15 of my challenge to learn virtual reality development in 21 days. I'm two-thirds done! My game was running slow, so I optimized it today." />
+<meta property="og:image" content="https://evanmays.com/assets/img/optimization-header-img.png" />
+<meta property="og:url" content="https://evanmays.com/blog/Optimizing-my-Game-Day-15-of-Learning-VR" />
+
+<meta property="twitter:title" content="I'm Learning VR Day 15: Optimizing my Game" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:description" content="Today is day 15 of my challenge to learn virtual reality development in 21 days. I'm two-thirds done! My game was running slow, so I optimized it today." />
+<meta name="twitter:site" content="@evanisagenius" />
+<meta name="twitter:creator" content="@evanisagenius" />
+<meta name="twitter:url" content="https://evanmays.com/blog/Optimizing-my-Game-Day-15-of-Learning-VR" />
+<meta property="twitter:image" content="https://evanmays.com/assets/img/optimization-header-img.png" />
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<script type='text/javascript'> var _d_site = _d_site || 'D572DD87773D21994C7D36E8'; </script>
+<script src='//widget.privy.com/assets/widget.js'></script>
+
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="topcontainer">
+<div id="hello">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 centered">
+<h3 id='readtime-line'><i class='fa fa-clock-o' aria-hidden='true' style='font-size:.8em'></i> 3 min read</h3><h2 id='dateline'>Jan 19th, 2018</h2><h1 id='titleline'>I'm Learning VR Day 15: Optimizing my Game</h1><h2 id='byline'>by <a href='/blog'>Evan Mays</a></h2> <img class="large-blog-img" src="//evanmays.com/assets/img/optimization-header-img.png" />
+<p>
+Today is day 15 of my challenge to learn virtual reality development in 21 days. I'm two-thirds done! My game was running slow, so I optimized it today.
+</p>
+<p>
+My game looks choppy because it has a low frames per second (FPS) rate.
+</p>
+<h2>
+ What are Frames per Second?
+</h2>
+<p>
+Videos are just a bunch of images with slight variation in movement; all played in quick succession. 30 FPS means that 30 images are being played every second. The higher the FPS, the more smooth a video will look. Usually, anything below 24 FPS seems choppy.
+</p>
+<p>
+Our eyes can see up to 1000 FPS. High-end virtual reality systems aim for 90 FPS. Film and TV are in the range of 30 FPS. My game runs at 15 FPS. So, it looks choppy. I turned on stats mode to see if I could find any issues. Here’s an image of the stats:
+</p>
+<img class="medium-blog-img" src="//evanmays.com/assets/img/White-Void-a-frame-stats-before-optimizing.png" />
+<p>
+You can see there’s a lot of red around the frames per second (FPS) and Faces. I’m not sure what most of the stats are aside from FPS. But, according to the A-Frame website, I want the FPS number to go up and every other number to go down.
+</p>
+<h2>
+A Crash Course in Optimizing A-Frame for Graphics
+</h2>
+<p>
+The first step is to fix how I’m loading in images of the characters. Currently, the game loads each character’s image from the hard drive in every frame. So, I'm loading the pictures more than 15 times each second. I can change that, so the game loads the character images once when the game starts.
+</p>
+<p>
+I also learned that A-Frame likes the images to be sized correctly. The width and height of my character images have to be in powers of two. So the width can be 2, or 4, or 8, or 16, or 32, etc. And the same thing for the height. When it isn’t in powers of two, A-Frame has to resize the images, which can decrease performance.
+</p>
+<p>
+The real magic came when I realized that the a-sky element was killing my face count. a-sky was my original method of creating the white background of the game. I found a better technique though. I just created a white box that surrounds the player. It's easier for the game to build a small white box than an enormous sky. So, my number of faces went from 4,000 to 200. That’s a significant improvement.
+</p>
+<p>
+Now I just need to fix the FPS which hasn't budged. To my surprise, the frame rate jumped to 60 FPS when I opened the game on my iPhone instead of my laptop. I thought this was because the phone was only running the game, while the computer had lots of programs open at once.
+</p>
+<p>
+It turns out that the framerate gets bad when the screen is too big. I tried shrinking my browser on my computer, and the frame rate quickly improved. So, it just takes more processing power for a larger screen.
+</p>
+<p>
+So, I finished optimizing. I could optimize more, but the game’s graphics are good enough for now.
+</p>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 centered">
+<p><div class="privy-embed-form" data-campaign="396972"></div></p>
+</div>
+</div> </div> 
+</div>
+<div id="f">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<p><span class="sliding-u-r-l" id="homepage-sliding-u-r-l"><a href="/">Go to my homepage</a></span><br>&copy; Copyright 2013-2020 Evan Mays</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111426304-2"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111426304-2');
+    </script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</body>
+</html>
